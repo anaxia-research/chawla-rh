@@ -1,6 +1,6 @@
 # The Liouville Function, the Riemann Hypothesis and Chowla's Conjecture
 
-Lean 4 / Mathlib formalisation and paper.
+Lean 4 / Mathlib formalisation.
 
 ## What is proved
 
@@ -13,8 +13,9 @@ Lean 4 / Mathlib formalisation and paper.
 | Correlations on all subsets ⟹ every sign pattern has density `2^-k` (any positive weights) | `ChowlaRH/SignPatterns.lean` | Lean, unconditional |
 | Full Chowla ⟹ all sign patterns equidistributed | `ChowlaRH/SignPatterns.lean` | Lean |
 | Tao (k=2, log) + Tao–Teräväinen (odd k, log) ⟹ all patterns of length ≤ 3 have log density `2^-k` | `ChowlaRH/SignPatterns.lean` | Lean, cited theorems as named hypotheses |
-| RH ⟺ `M(x) ≪ x^{1/2+ε}` ⟺ `L(x) ≪ x^{1/2+ε}` | paper, §3 | paper proof (Perron formula not in Mathlib) |
-| GRH ⟹ `λ` in progressions `≪ q^ε x^{1/2+ε}` | paper, §4 | paper proof |
+| Averaged Chowla (Matomäki–Radziwiłł–Tao) ⟹ for all but δH^k tuples h ∈ [1,H]^k, every sign pattern has frequency within δ of 2^-k | `ChowlaRH/AlmostAll.lean` | Lean, cited theorem as named hypothesis `MRTAveraged` |
+| RH ⟺ `M(x) ≪ x^{1/2+ε}` ⟺ `L(x) ≪ x^{1/2+ε}` | accompanying paper, §3 | paper proof (Perron formula not in Mathlib) |
+| GRH ⟹ `λ` in progressions `≪ q^ε x^{1/2+ε}` | accompanying paper, §4 | paper proof |
 
 Chowla's conjecture of order k ≥ 2 (Cesàro averages), and its logarithmic form for even k ≥ 4,
 are **not** proved here and are not known to follow from RH or GRH. See §7 of the paper.
@@ -22,7 +23,7 @@ are **not** proved here and are not known to follow from RH or GRH. See §7 of t
 ## Hypotheses
 
 * `LittlewoodRH : ∀ ε > 0, MertensBound (1/2 + ε)` — equivalent to RH (paper, Theorem 1.2).
-* `TaoTwoPoint`, `TaoTeravainenOdd` — published theorems (Forum Math. Pi 2016; JTNB 2018, Duke 2019),
+* `TaoTwoPoint`, `TaoTeravainenOdd`, `MRTAveraged` — published theorems (Forum Math. Pi 2016; JTNB 2018, Duke 2019; Algebra Number Theory 2015),
   stated in the notation of the development.
 
 No hypothesis is used anywhere except as an explicit argument.
@@ -39,7 +40,3 @@ lake env lean Axioms.lean
 `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, no `axiom`, no `native_decide`.
 
 Toolchain: Lean `v4.35.0`, Mathlib `v4.35.0`.
-
-## Paper
-
-`paper/Liouville-RH-Chowla.tex` (amsart) and `paper/Liouville-RH-Chowla.pdf`.

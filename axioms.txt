@@ -10,3 +10,6 @@
 'ChowlaRH.tendsto_pattern_of_chowla' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ChowlaRH.logPattern_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ChowlaRH.natPattern_one_of_littlewoodRH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ChowlaRH.sum_abs_scorr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ChowlaRH.patCount_close' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ChowlaRH.almostAll_patterns' depends on axioms: [propext, Classical.choice, Quot.sound]
