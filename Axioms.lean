@@ -12,3 +12,6 @@ open ChowlaRH
 #print axioms ChowlaRH.tendsto_pattern_of_chowla
 #print axioms ChowlaRH.logPattern_le_three
 #print axioms ChowlaRH.natPattern_one_of_littlewoodRH
+#print axioms ChowlaRH.sum_abs_scorr
+#print axioms ChowlaRH.patCount_close
+#print axioms ChowlaRH.almostAll_patterns
