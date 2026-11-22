@@ -15,3 +15,9 @@ open ChowlaRH
 #print axioms ChowlaRH.sum_abs_scorr
 #print axioms ChowlaRH.patCount_close
 #print axioms ChowlaRH.almostAll_patterns
+#print axioms ChowlaRH.exists_neg_in_window
+#print axioms ChowlaRH.exists_pos_in_window
+#print axioms ChowlaRH.infinite_neg
+#print axioms ChowlaRH.infinite_pos
+#print axioms ChowlaRH.card_neg_ge
+#print axioms ChowlaRH.card_pos_ge
